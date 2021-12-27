@@ -1,4 +1,3 @@
-import org.junit.Assert;
 
 public class Praktikum {
 
@@ -7,6 +6,6 @@ public class Praktikum {
     public static void main(String[] args) {
 
         Account account = new Account(embossingName);
-        Assert.assertTrue("Имя не может быть напечатано", account.checkNameToEmboss());
+        System.out.println(account.checkNameToEmboss());
     }
 }

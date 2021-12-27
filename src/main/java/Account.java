@@ -1,3 +1,6 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Account {
 
     private final String name;
@@ -27,5 +30,12 @@ public class Account {
             System.out.println("В имени должно быть не меньше 3 и не больше 19 символов");
             return false;
         }
+    }
+
+    private static final String namePattern = "(?=.{3,19}$)[а-яА-Яa-zA-z]+\\s{1}[а-яА-Яa-zA-z]+";
+    private static final Pattern pattern = Pattern.compile(namePattern);
+    public boolean checkNameToEmbossByPattern() {
+        Matcher matcher = pattern.matcher(name);
+        return matcher.matches();
     }
 }

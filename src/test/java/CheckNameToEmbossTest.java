@@ -38,4 +38,11 @@ public class CheckNameToEmbossTest {
         boolean actual = account.checkNameToEmboss();
         assertEquals(expectedEmbossResult, actual);
     }
+
+    @Test
+    public void doesNameCanBeEmbossByPattern(){
+        Account account = new Account(embossingName);
+        boolean actual = account.checkNameToEmbossByPattern();
+        assertEquals(expectedEmbossResult, actual);
+    }
 }
